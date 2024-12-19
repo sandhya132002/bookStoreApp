@@ -3,6 +3,7 @@ import Login from './Login';
 import Logout from './Logout';
 import { useAuth } from '../context/AuthProvider';
 
+
 const Navbar = () => {
     const [authUser, setAuthUser] = useAuth();
     console.log(authUser);
@@ -88,6 +89,7 @@ const Navbar = () => {
                         <div className="navbar-center hidden lg:flex">
                             <ul className="menu menu-horizontal px-1">{navItems}</ul>
                         </div>
+
                         <div className='hidden md:block'>
                             <label className="px-3 py-2 border rounded-md flex items-center gap-2">
                                 <input type="text" className="grow outline-none dark:bg-slate-900 dark:text-white" placeholder="Search" />
@@ -102,7 +104,9 @@ const Navbar = () => {
                                         clipRule="evenodd" />
                                 </svg>
                             </label>
+                           
                         </div>
+                        
                         <label className="swap swap-rotate">
                             {/* this hidden checkbox controls the state */}
                             <input type="checkbox" className="theme-controller" value="synthwave" />
